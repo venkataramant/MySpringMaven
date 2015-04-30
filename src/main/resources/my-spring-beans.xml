@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean abstract="true" class="com.paramtech.learning.spring.interfaces.Guest"
+		id="guest" />
+
+	<bean class="com.paramtech.learning.spring.beans.GoldenGuest"
+		parent="guest" id="goldenGuest">
+		<constructor-arg type="java.lang.String" index="0">
+			<value>Raman</value>
+		</constructor-arg>
+		<constructor-arg index="1">
+			<value>Golden</value>
+		</constructor-arg>
+	</bean>
+
+</beans>
